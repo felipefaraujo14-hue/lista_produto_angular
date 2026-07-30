@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+:root {
+    --div-fundo: #111111;
+    --branca: #ffffff;
+    --cor: #000080;
+    --btnAdd: #00FF00;
+    --btnLimpa: #8B0000;
+
+    --fundo-body: #eeeeee;
+    --input-bg: #ffffff;
+    --texto: #333333;
+    --sombra: 0px 5px 15px rgba(0,0,0,0.2);
+    --raio: 10px;
+  }
+
+  body{
+    margin: 20px;
+  }
