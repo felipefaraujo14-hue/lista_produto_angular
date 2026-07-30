@@ -1,27 +1,26 @@
 <div id="div-form">
     <h3>Lista Produtos</h3>
-
+  
     <form id="formulario">
-
-        <label for="descricao">Descrição Produto</label>
-        <input type="text" id="descricao" name="descricao" [(ngModel)]="descricao_produto">
-        <label for="valor">Valor</label>
-
-        <input type="number" id="valor" name="valor" [(ngModel)]="valor_unitario">
-        <div id="div-btns">
-
-            <button type="button" id="btnAdd" (click) = "addItem()">Adicionar</button>
-            <button type="reset" id="btnLimpa">Limpar</button>
-        </div>
-
-        <div id="div-lista">
-
-            @for (elem of listaItens; track elem.idProduto) {
-                <div class="div-item">{{ elem.idProduto }} - {{ elem.descricaoProduto }} R$ {{ elem.valorUnitario }}
-                </div> 
-            } @empty {
-                <div class="div-item">Nenhum Produto na Lista</div>
-              }
-
+      <label for="descricao">Descrição Produto</label>
+      <input type="text" id="descricao" name="descricao" [(ngModel)]="descricao_produto">
+  
+      <label for="valor">Valor</label>
+      <input type="number" id="valor" name="valor" [(ngModel)]="valor_unitario">
+  
+      <div id="div-btns">
+        <button type="button" id="btnAdd" (click)="addItem()">Adicionar</button>
+        <button type="button" id="btnLimpa" (click)="limpaForm()">Limpar</button>
+      </div>
     </form>
-</div>
+  
+    <div id="div-lista">
+      @for (elem of listaItens; track elem.idProduto) {
+        <div class="div-item">
+          {{ elem.idProduto }} - {{ elem.descricaoProduto }} R$ {{ elem.valorUnitario }}
+        </div>
+      } @empty {
+        <div class="div-item">Nenhum Produto na Lista</div>
+      }
+    </div>
+  </div>
